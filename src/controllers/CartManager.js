@@ -35,31 +35,35 @@ class CartManager {
         if(!cartById) return "Carrito no encontrado."
         return cartById
     };
+    //////////////////////////////////////////////////////
+    addProductInCart = async (cartId, productId) => {
+        let cartById = await this.exist(cartId);
+        if (!cartById) return "Carrito no encontrado.";
     
-    addProductInCart = async (cartId, productId) =>{
-        let cartById = await this.exist(cartId)
-        if(!cartById) return "Carrito no encontrado."
-        let productById = await productAll.exist(productId)
-        if(!cartById) return "Producto no encontrado."
-
-        let cartsAll= await this.readCarts()  
-        let cartFilter= cartsAll.filter(cart => cart.id != cartId)
-
-
-        if(cartById.products.some(prod => prod.id === productId)){
-            let productInCart = cartById.products.find(prod => prod.id === productId)
-            productInCart.cantidad++ ;
-            let cartsConcat = [productInCart, ...cartFilter]
-            await this.writeCarts(cartsConcat)
-            return "Producto sumado al carrito."
+        let productById = await productAll.exist(productId);
+        if (!productById) return "Producto no encontrado.";
+    
+        let cartsAll = await this.readCarts();
+        let cartToUpdate = cartsAll.find((cart) => cart.id === cartId);
+    
+        if (cartToUpdate) {
+            const existingProduct = cartToUpdate.products.find((prod) => prod.id === productId);
+    
+            if (existingProduct) {
+                existingProduct.cantidad++;
+                await this.writeCarts(cartsAll);
+                return "Producto sumado al carrito.";
+            } else {
+                cartToUpdate.products.push({ id: productId, cantidad: 1 });
+                await this.writeCarts(cartsAll);
+                return "Producto agregado al carrito.";
+            }
+        } else {
+            return "Carrito no encontrado.";
         }
-        
-
-
-        let cartsConcat = [{id:cartId, products : [{id:productById.id, cantidad: 1}]}, ...cartFilter]
-        await this.writeCarts(cartsConcat)
-        return "Producto agregado al carrito."
-    }
+    };
+    
+    
     }
 
 
