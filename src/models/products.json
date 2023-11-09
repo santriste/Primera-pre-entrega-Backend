@@ -1,1 +1,62 @@
-[{"title":"Ryzen 3 3200","description":"Procesador AMD.","code":"asdolorapijsasd","price":60,"status":true,"stock":10,"category":"componentes","id":"5oR1T5rirXzJZqHbSYLsU"},{"title":"Ryzen 9 7950x3D","description":"Procesador AMD.","code":"asdfarfiasd","price":500,"status":true,"stock":10,"category":"componentes","id":"lHanyXX3r_nl53tXg1UcC"},{"title":"Ryzen 5 5600x","description":"Procesador AMD.","code":"asdfirfisd","price":100,"status":true,"stock":10,"category":"componentes","id":"T4jbuHnFoNgWIx2ZLMA5s"},{"title":"Ryzen 5 2600","description":"Procesador AMD.","code":"asdfarsioasd","price":65,"status":true,"stock":10,"category":"componentes","id":"CEnjbmMw5K34XrBjab-Oz"}]
+[
+    {
+        "title": "Ryzen 3 3200",
+        "description": "Procesador AMD.",
+        "code": "asdolorapijsasd",
+        "price": 60,
+        "status": true,
+        "stock": 10,
+        "category": "componentes",
+        "id": "5oR1T5rirXzJZqHbSYLsU"
+    },
+    {
+        "title": "Ryzen 9 7950x3D",
+        "description": "Procesador AMD.",
+        "code": "asdfarfiasd",
+        "price": 500,
+        "status": true,
+        "stock": 10,
+        "category": "componentes",
+        "id": "lHanyXX3r_nl53tXg1UcC"
+    },
+    {
+        "title": "Ryzen 5 5600x",
+        "description": "Procesador AMD.",
+        "code": "asdfirfisd",
+        "price": 100,
+        "status": true,
+        "stock": 10,
+        "category": "componentes",
+        "id": "T4jbuHnFoNgWIx2ZLMA5s"
+    },
+    {
+        "title": "Ryzen 5 2600",
+        "description": "Procesador AMD.",
+        "code": "asdfarsioasd",
+        "price": 65,
+        "status": true,
+        "stock": 10,
+        "category": "componentes",
+        "id": "CEnjbmMw5K34XrBjab-Oz"
+    },
+    {
+        "title": "Ryzen 9 3950X",
+        "description": "Procesador AMD.",
+        "code": "asdfigasioasd",
+        "price": 140,
+        "status": true,
+        "stock": 10,
+        "category": "componentes",
+        "id": "BZOfQYgs1ttEQEimT91vl"
+    },
+    {
+        "title": "Intel core i5-13600K",
+        "description": "Procesador Intel.",
+        "code": "asdfarfiasioasd",
+        "price": 240,
+        "status": true,
+        "stock": 10,
+        "category": "componentes",
+        "id": "tM420RCHulCfubao0iJNc"
+    }
+]
